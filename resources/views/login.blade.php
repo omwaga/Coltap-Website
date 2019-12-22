@@ -48,14 +48,15 @@
                   <h2 class="title text-center">Log in to Marvel</h2>
                   <div class="row">
                     <div class="form-container col-xs-12 col-md-5">
-                      <form class="login-form">
+                      <form class="login-form" method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="form-group email">
                           <label class="sr-only" for="login-email">Email or username</label>
-                          <input id="login-email" type="email" class="form-control login-email" placeholder="Email or username"> </div>
+                          <input id="login-email" name="email" type="email" class="form-control login-email" placeholder="Email or username"> </div>
                         <!-- .form-group -->
                         <div class="form-group password">
                           <label class="sr-only" for="login-password">Password</label>
-                          <input id="login-password" type="password" class="form-control login-password" placeholder="Password">
+                          <input id="login-password" name="password" type="password" class="form-control login-password" placeholder="Password">
                           <p class="forgot-password">
                             <a href="{{route('reset-password')}}">Forgot password?</a>
                           </p>

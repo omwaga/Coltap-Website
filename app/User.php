@@ -36,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+        User::saving(function ($model) {
+            if(!User::where("role","=", "admin")->exists())
+            {
+                $model->role = 'admin';
+            } 
+
+        });
+    }
 }

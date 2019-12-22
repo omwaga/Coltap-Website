@@ -111,22 +111,22 @@
                         </div>
                         <div class="contentCircle">
                            <div class="CirItem title-box active CirItem1">
-                              <h2 class="title"><span>Automate</span></h2>
+                              <h2 class="title"><span>Consulting</span></h2>
                               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                               <i class="fa fa-clock-o"></i>
                            </div>
                            <div class="CirItem title-box CirItem2">
-                              <h2 class="title"><span>Chat </span></h2>
+                              <h2 class="title"><span>Creative Idea </span></h2>
                               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                               <i class="fa fa-comments"></i>
                            </div>
                            <div class="CirItem title-box CirItem3">
-                              <h2 class="title"><span>Responses</span></h2>
+                              <h2 class="title"><span>Development</span></h2>
                               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                               <i class="fa fa-user"></i>
                            </div>
                            <div class="CirItem title-box CirItem4">
-                              <h2 class="title"><span>Tags</span></h2>
+                              <h2 class="title"><span>Consulting</span></h2>
                               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                               <i class="fa fa-tags"></i>
                            </div>

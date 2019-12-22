@@ -9,29 +9,19 @@
     <title>The Coltap | Be Inspired By Best</title>
     <meta name="description" content="Marvel - HTML Template for Product Promotion" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" />
-    <link rel="icon" href="images/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="{{ asset('images/favicons/apple-touch-icon.png')}}" />
+    <link rel="icon" href="{{ asset('images/favicons/favicon.ico')}}" />
     <!-- Google fonts / Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery-2.2.4.min.js')}}"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="vendor/flickity/flickity.min.css" />
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" id="css-font-awesome" href="vendor/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" id="css-styles" href="styles/style.css" />
-    <link rel="stylesheet" id="css-fonts" href="styles/fonts-1.css" />
-    <!-- End Stylesheets -->
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ----------><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="{{ asset('vendor/flickity/flickity.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" id="css-font-awesome" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css')}}" />
+    <link rel="stylesheet" id="css-styles" href="{{ asset('styles/style.css')}}" />
+    <link rel="stylesheet" id="css-fonts" href="{{ asset('styles/fonts-1.css')}}" />
+    <!-- End Stylesheets --> 
 
 <style type="text/css">
       .holderCircle { width: 500px; height: 500px; border-radius: 100%; margin: 60px auto; position: relative; }
@@ -119,12 +109,36 @@
                       </li>
                     </ul>
                   </li>
+                   @guest
+                            
                   <li class="nav-item">
                     <a href="{{route('userlogin')}}">Login</a>
                   </li>
+                            @if (Route::has('register'))
+                                
                   <li class="nav-item nav-item-cta last">
                     <a class="btn btn-cta btn-cta-secondary" href="{{route('signup')}}">Sign Up Free</a>
                   </li>
+                            @endif
+                        @else
+                            <li class="nav-item nav-item-cta last dropdown">
+                                <a id="navbarDropdown" class="btn btn-cta btn-cta-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                 </ul>
                 <!-- .nav -->
               </div>
@@ -314,16 +328,16 @@
     </div>
     <!-- End Apps Modal -->
     <!-- Javascript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-    <script src="vendor/flickity/flickity.pkgd.min.js"></script>
-    <script src="vendor/froogaloop2/froogaloop2.min.js"></script>
-    <script src="vendor/inview/jquery.inview.min.js"></script>
-    <script src="vendor/masonry/masonry.pkgd.min.js"></script>
-    <script src="vendor/velocity/velocity.min.js"></script>
-    <script src="vendor/velocity/velocity.ui.min.js"></script>
-    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}"></script>
+    <script src="{{ asset('vendor/flickity/flickity.pkgd.min.js')}}"></script>
+    <script src="{{ asset('vendor/froogaloop2/froogaloop2.min.js')}}"></script>
+    <script src="{{ asset('vendor/inview/jquery.inview.min.js')}}"></script>
+    <script src="{{ asset('vendor/masonry/masonry.pkgd.min.js')}}"></script>
+    <script src="{{ asset('vendor/velocity/velocity.min.js')}}"></script>
+    <script src="{{ asset('vendor/velocity/velocity.ui.min.js')}}"></script>
+    <script src="{{ asset('vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{ asset('scripts/main.js')}}"></script>
     <script type="text/javascript">
       
   let i=2;

@@ -14,7 +14,15 @@
 Route::get('/', function () {
     return view('index');
 });
-
+// Admin Routes
+Route::get('/admin', 'PagesController@admin')->name('admin');
+Route::get('/dashboard', 'AdminController@index')->name('adminindex');
+Route::resource('services', 'ProductsController');
+Route::get('/admin-aboutus', 'AdminController@about')->name('admin-aboutus');
+Route::get('/admin-services', 'ProductsController@index')->name('admin-services');
+Route::get('/active-services', 'ProductsController@activeservices')->name('manageservices');
+Route::get('/inactive-services', 'ProductsController@inactiveservices')->name('inactiveservices');
+// Public Routes
 Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/pricing', 'PagesController@pricing')->name('pricing');
 Route::get('/aboutus', 'PagesController@aboutus')->name('aboutus');

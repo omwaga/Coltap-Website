@@ -14,13 +14,13 @@
     <!-- Google fonts / Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery-2.2.4.min.js')}}"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="vendor/flickity/flickity.min.css" />
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" id="css-font-awesome" href="vendor/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" id="css-styles" href="styles/style.css" />
-    <link rel="stylesheet" id="css-fonts" href="styles/fonts-1.css" />
+    <link rel="stylesheet" href="{{ asset('vendor/flickity/flickity.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" id="css-font-awesome" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css')}}" />
+    <link rel="stylesheet" id="css-styles" href="{{ asset('styles/style.css')}}" />
+    <link rel="stylesheet" id="css-fonts" href="{{ asset('styles/fonts-1.css')}}" />
     <!-- End Stylesheets -->
     
   </head>
@@ -270,17 +270,17 @@
     </div>
     <!-- End Apps Modal -->
     <!-- Javascript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-    <script src="vendor/flickity/flickity.pkgd.min.js"></script>
-    <script src="vendor/froogaloop2/froogaloop2.min.js"></script>
-    <script src="vendor/inview/jquery.inview.min.js"></script>
-    <script src="vendor/masonry/masonry.pkgd.min.js"></script>
-    <script src="vendor/velocity/velocity.min.js"></script>
-    <script src="vendor/velocity/velocity.ui.min.js"></script>
-    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="scripts/blog.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}"></script>
+    <script src="{{ asset('vendor/flickity/flickity.pkgd.min.js')}}"></script>
+    <script src="{{ asset('vendor/froogaloop2/froogaloop2.min.js')}}"></script>
+    <script src="{{ asset('vendor/inview/jquery.inview.min.js')}}"></script>
+    <script src="{{ asset('vendor/masonry/masonry.pkgd.min.js')}}"></script>
+    <script src="{{ asset('vendor/velocity/velocity.min.js')}}"></script>
+    <script src="{{ asset('vendor/velocity/velocity.ui.min.js')}}"></script>
+    <script src="{{ asset('vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{ asset('scripts/blog.js')}}"></script>
+    <script src="{{ asset('scripts/main.js')}]"></script>
     
   </body>
 </html>

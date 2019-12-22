@@ -9,18 +9,18 @@
     <title>Signup | Marvel</title>
     <meta name="description" content="Marvel - HTML Template for Product Promotion" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="{{ asset('images/favicons/apple-touch-icon.png')}}" />
     <link rel="icon" href="images/favicons/favicon.ico" />
     <!-- Google fonts / Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery-2.2.4.min.js')}}"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="vendor/flickity/flickity.min.css" />
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" id="css-font-awesome" href="vendor/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" id="css-styles" href="styles/style.css" />
-    <link rel="stylesheet" id="css-fonts" href="styles/fonts-1.css" />
+    <link rel="stylesheet" href="{{ asset('vendor/flickity/flickity.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" id="css-font-awesome" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css')}}" />
+    <link rel="stylesheet" id="css-styles" href="{{ asset('styles/style.css')}}" />
+    <link rel="stylesheet" id="css-fonts" href="{{ asset('styles/fonts-1.css')}}" />
     <!-- End Stylesheets -->
   </head>
   <body class="signup-page access-page has-full-screen-bg">
@@ -49,14 +49,23 @@
                   <p class="intro text-center">It only takes 2 minutes!</p>
                   <div class="row">
                     <div class="form-container col-xs-12 col-md-5">
-                      <form class="signup-form">
+                      <form class="signup-form" method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <div class="form-group email">
+                          <label class="sr-only" for="signup-email">Your name</label>
+                          <input id="signup-name" name="name" type="text" class="form-control login-email" placeholder="Your Name"> </div>
+                        <!-- .form-group -->
                         <div class="form-group email">
                           <label class="sr-only" for="signup-email">Your email</label>
-                          <input id="signup-email" type="email" class="form-control login-email" placeholder="Your email"> </div>
+                          <input id="signup-email" name="email" type="email" class="form-control login-email" placeholder="Your email"> </div>
                         <!-- .form-group -->
                         <div class="form-group password">
                           <label class="sr-only" for="signup-password">Your password</label>
-                          <input id="signup-password" type="password" class="form-control login-password" placeholder="Password"> </div>
+                          <input id="signup-password" name="password" type="password" class="form-control login-password" placeholder="Password"> </div>
+                        <!-- .form-group -->
+                        <div class="form-group password">
+                          <label class="sr-only" for="signup-password">Your password</label>
+                          <input id="signup-password" name="password_confirmation" type="password" class="form-control login-password" placeholder="Confirm password"> </div>
                         <!-- .form-group -->
                         <button type="submit" class="btn btn-block btn-cta-primary">Sign up</button>
                         <p class="note">By signing up, you agree to our terms of services and privacy policy.</p>
@@ -279,15 +288,15 @@
     </div>
     <!-- End Apps Modal -->
     <!-- Javascript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-    <script src="vendor/flickity/flickity.pkgd.min.js"></script>
-    <script src="vendor/froogaloop2/froogaloop2.min.js"></script>
-    <script src="vendor/inview/jquery.inview.min.js"></script>
-    <script src="vendor/masonry/masonry.pkgd.min.js"></script>
-    <script src="vendor/velocity/velocity.min.js"></script>
-    <script src="vendor/velocity/velocity.ui.min.js"></script>
-    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}"></script>
+    <script src="{{ asset('vendor/flickity/flickity.pkgd.min.js')}}"></script>
+    <script src="{{ asset('vendor/froogaloop2/froogaloop2.min.js')}}"></script>
+    <script src="{{ asset('vendor/inview/jquery.inview.min.js')}}"></script>
+    <script src="{{ asset('vendor/masonry/masonry.pkgd.min.js')}}"></script>
+    <script src="{{ asset('vendor/velocity/velocity.min.js')}}"></script>
+    <script src="{{ asset('vendor/velocity/velocity.ui.min.js')}}"></script>
+    <script src="{{ asset('vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{ asset('scripts/main.js')}}"></script>
   </body>
 </html>

@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    public function admin()
+    {
+        return view('admin.login');
+    }
+
     public function services()
     {
     	return view('services');
