@@ -34,7 +34,13 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'product_name' => ['required', 'min:3'],
+            'short_description' => 'required',
+            'full_description' => 'required'
+        ]);
+
+        dd($attributes);
     }
 
     /**

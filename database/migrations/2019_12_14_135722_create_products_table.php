@@ -15,6 +15,10 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('product_name');
+            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->text('short_description');
+            $table->text('full_description');
             $table->timestamps();
         });
     }
