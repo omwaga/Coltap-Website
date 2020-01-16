@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
         <!-- Document title -->
-        <title>Dashboard | AppUI</title>
+        <title>Dashboard | The Coltap</title>
 
         <meta name="description" content="AppUI - Admin Dashboard Template & UI Framework" />
         <meta name="author" content="rustheme" />
@@ -90,13 +90,13 @@
                                     <ul class="nav nav-subnav">
 
                                         <li>
-                                            <a href="#">Blog Categories</a>
+                                            <a href="/blogcategories/create">Blog Categories</a>
                                         </li>
                                         <li>
-                                            <a href="#">Blog Articles</a>
+                                            <a href="/blogposts/create">Blog Articles</a>
                                         </li>
                                         <li>
-                                            <a href="#">Blog Archives</a>
+                                            <a href="{{route('allarchives')}}">Blog Archives</a>
                                         </li>
 
                                     </ul>
@@ -107,13 +107,10 @@
                                     <ul class="nav nav-subnav">
 
                                         <li>
-                                            <a href="#">Blog Categories</a>
+                                            <a href="/customers">All Customers</a>
                                         </li>
                                         <li>
-                                            <a href="#">Blog Articles</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Blog Archives</a>
+                                            <a href="/customers/create">New Customer</a>
                                         </li>
 
                                     </ul>

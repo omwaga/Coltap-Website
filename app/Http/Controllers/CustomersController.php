@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BlogCategoriesController extends Controller
+class CustomersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class BlogCategoriesController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.all-customers');
     }
 
     /**
@@ -23,7 +23,7 @@ class BlogCategoriesController extends Controller
      */
     public function create()
     {
-        return view('admin.new-blogcategory');
+        return view('admin.new-customer');
     }
 
     /**
