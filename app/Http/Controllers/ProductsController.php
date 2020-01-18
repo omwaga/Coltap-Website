@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class ProductsController extends Controller
 {
@@ -13,7 +14,9 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('admin.services');
+        $services = Product::all();
+
+        return view('admin.services', compact('services'));
     }
 
     /**
@@ -40,7 +43,9 @@ class ProductsController extends Controller
             'full_description' => 'required'
         ]);
 
-        dd($attributes);
+        Product::create($attributes);
+
+        return redirect('/services');
     }
 
     /**
@@ -60,9 +65,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $service)
     {
-        //
+        return view('admin.edit-service', compact('service'));
     }
 
     /**
@@ -72,9 +77,11 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Product $service)
     {
-        //
+        $service->update(request(['product_name', 'full_description', 'short_description']));
+
+        return redirect('/services');
     }
 
     /**
@@ -83,9 +90,11 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $service)
     {
-        //
+        $service->delete();
+
+        return redirect('/services');
     }
 
     public function activeservices()

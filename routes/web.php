@@ -19,7 +19,6 @@ Route::get('/admin', 'PagesController@admin')->name('admin');
 Route::get('/dashboard', 'AdminController@index')->name('adminindex');
 Route::resource('services', 'ProductsController');
 Route::get('/admin-aboutus', 'AdminController@about')->name('admin-aboutus');
-Route::get('/admin-services', 'ProductsController@index')->name('admin-services');
 Route::get('/active-services', 'ProductsController@activeservices')->name('manageservices');
 Route::get('/inactive-services', 'ProductsController@inactiveservices')->name('inactiveservices');
 Route::resource('blogcategories','BlogCategoriesController');
@@ -27,7 +26,7 @@ Route::resource('blogposts', 'BlogPostsController');
 Route::get('/blog-archives', 'ArchivesController@allarchives')->name('allarchives');
 Route::resource('customers', 'CustomersController');
 // Public Routes
-Route::get('/services', 'PagesController@services')->name('services');
+Route::get('/our-services', 'PagesController@services')->name('services');
 Route::get('/pricing', 'PagesController@pricing')->name('pricing');
 Route::get('/aboutus', 'PagesController@aboutus')->name('aboutus');
 Route::get('/contactus', 'PagesController@contactus')->name('contactus');

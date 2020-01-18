@@ -73,7 +73,7 @@
                                             <a href="/services/create">New Service</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('admin-services')}}">Manage Services</a>
+                                            <a href="/services">Manage Services</a>
                                         </li>
                                         <li>
                                             <a href="{{route('manageservices')}}">Active Services</a>
@@ -90,7 +90,7 @@
                                     <ul class="nav nav-subnav">
 
                                         <li>
-                                            <a href="/blogcategories/create">Blog Categories</a>
+                                            <a href="/blogcategories">Blog Categories</a>
                                         </li>
                                         <li>
                                             <a href="/blogposts/create">Blog Articles</a>
@@ -122,7 +122,7 @@
 
                         <div class="drawer-footer">
                             <p class="copyright">The Coltap &copy;</p>
-                            <a href="# target="_blank" rel="nofollow">Inspired by Best</a>
+                            <a href="#" target="_blank" rel="nofollow">Inspired by Best</a>
                         </div>
                     </div>
                     <!-- End drawer scroll area -->

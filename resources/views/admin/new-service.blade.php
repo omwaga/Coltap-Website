@@ -25,7 +25,7 @@
                                             <div class="form-group">
                                                 <div class="col-xs-12">
                                                     <label for="mega-bio">Full Description:</label>
-                                                    <textarea class="form-control input-lg" id="mega-bio" name="full_description" rows="22" placeholder="Enter the full description about the product...">{{old('full_description')}}</textarea>
+                                                    <textarea class="form-control input-lg" id="mega-bio" name="full_description" rows="10" placeholder="Enter the full description about the product...">{{old('full_description')}}</textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -33,7 +33,7 @@
                                             <div class="form-group">
                                                 <div class="col-xs-12">
                                                     <label for="mega-city">Short Description for the Product:</label>
-                                                    <textarea class="form-control input-lg" id="mega-bio" name="short_description" rows="22" placeholder="Enter a short description about the product...">{{old('short_description')}}</textarea>
+                                                    <textarea class="form-control input-lg" id="mega-bio" name="short_description" rows="10" placeholder="Enter a short description about the product...">{{old('short_description')}}</textarea>
                                                 </div>
                                             </div>
                                         </div>

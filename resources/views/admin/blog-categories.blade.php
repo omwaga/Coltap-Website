@@ -4,50 +4,47 @@
 
                     <!-- Page Content -->
                     <div class="container-fluid p-y-md">
-                        <!-- Full Table -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>All Products and Services</h4>
+                        <!-- Mega Form -->
+                        <h2 class="section-title">Add Blog Category</h2>
                                 <button class="btn btn-app btn-block" data-toggle="modal" data-target="#modal-fadein" type="button">Launch Modal</button>
-                            </div>
+                        <div class="card">
+                            @include('errors')
                             <div class="card-block">
-                                <div class="table-responsive">
-                                    <table class="table table-striped table-borderless table-vcenter">
-                                        <thead>
-                                            <tr>
-                                                <th class="text-center w-10"><i class="ion-person"></i></th>
-                                                <th>Product Name</th>
-                                                <th class="text-center" style="width: 100px;">Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                          @foreach($services as $service)
-                                            <tr>
-                                                <td class="text-center">
-                                                    <img class="img-avatar img-avatar-48" src="assets/img/avatars/avatar2.jpg" alt="">
-                                                </td>
-                                                <td class="font-500">{{$service->product_name}}</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group">
-                                                        <a href="/services/{{$service->id}}/edit" class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="ion-edit"></i></a>
-                                                        <form method="POST" action="/services/{{ $service->id}}">
-                                                            @method('DELETE')
-                                                            @csrf
-                                                        <button type="submit" class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="ion-close"></i></button>
-                                                    </form>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
+                                @if(!$categories->count())
+                                <form class="form-horizontal m-t-sm" action="" method="post">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="form-group">
+                                                <div class="col-xs-6">
+                                                    <label for="mega-firstname">Category Name:</label>
+                                                    <input class="form-control input-lg" type="text" id="mega-firstname" value="{{old('product_name')}}"  name="product_name" placeholder="Your first name" />
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="form-group">
+                                                <div class="col-xs-12">
+                                                    <label for="mega-bio">Category Description:</label>
+                                                    <textarea class="form-control input-lg" id="mega-bio" name="full_description" rows="8" placeholder="Enter the full description about the product...">{{old('full_description')}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group m-b-0">
+                                        <div class="col-xs-12">
+                                            <button class="btn btn-app" type="submit"><i class="ion-checkmark m-r-xs"></i> Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                @else
+                                data
+                                @endif
                             </div>
-                            <!-- .card-block -->
                         </div>
                         <!-- .card -->
-                        <!-- End Full Table -->
-                        
+                        <!-- End Mega Form -->
                     </div>
                     <!-- .container-fluid -->
                     <!-- End Page Content -->
@@ -59,7 +56,9 @@
         </div>
         <!-- .app-layout-canvas -->
 
-        <!-- Fade In Modal to add a new service-->
+        <div class="app-ui-mask-modal"></div>
+
+        <!-- Fade In Modal to add a new blog category-->
                     <div class="modal fade" id="modal-fadein" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
