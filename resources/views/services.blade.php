@@ -28,14 +28,15 @@
         <!-- Features Section -->
         <section class="features-tabbed section">
           <div class="container">
-            <h2 class="title m-b-lg text-center">Product features</h2>
+            <h2 class="title m-b-lg text-center">Products and Services</h2>
             <div class="row">
               <div id="blog-masonry" class="blog-list blog-list-card-style">
+                @foreach($products as $product)
                 <article class="post hentry col-md-4 col-sm-6">
                   <div class="post-inner">
                     <div class="content">
                       <h3 class="post-title">
-                        <a href="{{route('blog')}}">It's an art backed by science</a>
+                        <a href="{{route('blog')}}">{{$product->product_name}}</a>
                       </h3>
                       <ul class="meta-list list-inline">
                         <li class="post-time post_date date updated">2017-08-24</li>
@@ -49,7 +50,7 @@
                       </ul>
                       <!-- .meta-list -->
                       <div class="post-entry">
-                        <p>Tackling, local solutions inspire social change care metrics challenges...</p>
+                        <p>{!!$product->short_description!!}</p>
                         <a class="read-more" href="{{route('blog')}}">Read more
                           <i class="material-icons">chevron_right</i>
                         </a>
@@ -59,142 +60,7 @@
                   </div>
                   <!-- .post-inner -->
                 </article>
-                <article class="post hentry col-md-4 col-sm-6">
-                  <div class="post-inner">
-                    <div class="content">
-                      <h3 class="post-title">
-                        <a href="{{route('blog')}}">It's an art backed by science</a>
-                      </h3>
-                      <ul class="meta-list list-inline">
-                        <li class="post-time post_date date updated">2017-08-24</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>8</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                      <div class="post-entry">
-                        <p>Tackling, local solutions inspire social change care metrics challenges...</p>
-                        <a class="read-more" href="{{route('blog')}}">Read more
-                          <i class="material-icons">chevron_right</i>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- .content -->
-                  </div>
-                  <!-- .post-inner -->
-                </article><article class="post hentry col-md-4 col-sm-6">
-                  <div class="post-inner">
-                    <div class="content">
-                      <h3 class="post-title">
-                        <a href="{{route('blog')}}">It's an art backed by science</a>
-                      </h3>
-                      <ul class="meta-list list-inline">
-                        <li class="post-time post_date date updated">2017-08-24</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>8</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                      <div class="post-entry">
-                        <p>Tackling, local solutions inspire social change care metrics challenges...</p>
-                        <a class="read-more" href="{{route('blog')}}">Read more
-                          <i class="material-icons">chevron_right</i>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- .content -->
-                  </div>
-                  <!-- .post-inner -->
-                </article><article class="post hentry col-md-4 col-sm-6">
-                  <div class="post-inner">
-                    <div class="content">
-                      <h3 class="post-title">
-                        <a href="{{route('blog')}}">It's an art backed by science</a>
-                      </h3>
-                      <ul class="meta-list list-inline">
-                        <li class="post-time post_date date updated">2017-08-24</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>8</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                      <div class="post-entry">
-                        <p>Tackling, local solutions inspire social change care metrics challenges...</p>
-                        <a class="read-more" href="{{route('blog')}}">Read more
-                          <i class="material-icons">chevron_right</i>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- .content -->
-                  </div>
-                  <!-- .post-inner -->
-                </article><article class="post hentry col-md-4 col-sm-6">
-                  <div class="post-inner">
-                    <div class="content">
-                      <h3 class="post-title">
-                        <a href="{{route('blog')}}">It's an art backed by science</a>
-                      </h3>
-                      <ul class="meta-list list-inline">
-                        <li class="post-time post_date date updated">2017-08-24</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>8</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                      <div class="post-entry">
-                        <p>Tackling, local solutions inspire social change care metrics challenges...</p>
-                        <a class="read-more" href="{{route('blog')}}">Read more
-                          <i class="material-icons">chevron_right</i>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- .content -->
-                  </div>
-                  <!-- .post-inner -->
-                </article><article class="post hentry col-md-4 col-sm-6">
-                  <div class="post-inner">
-                    <div class="content">
-                      <h3 class="post-title">
-                        <a href="{{route('blog')}}">It's an art backed by science</a>
-                      </h3>
-                      <ul class="meta-list list-inline">
-                        <li class="post-time post_date date updated">2017-08-24</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>8</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                      <div class="post-entry">
-                        <p>Tackling, local solutions inspire social change care metrics challenges...</p>
-                        <a class="read-more" href="{{route('blog')}}">Read more
-                          <i class="material-icons">chevron_right</i>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- .content -->
-                  </div>
-                  <!-- .post-inner -->
-                </article>
+                @endforeach
               </div>
               <div class=" text-center col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1">
                 <!-- Nav tabs  -->

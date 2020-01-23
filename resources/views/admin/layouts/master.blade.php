@@ -33,6 +33,8 @@
         <link rel="stylesheet" id="css-app" href="{{ asset('assets/css/app.css')}}" />
         <link rel="stylesheet" id="css-app-custom" href="{{ asset('assets/css/app-custom.css')}}" />
         <!-- End Stylesheets -->
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>tinymce.init({selector:'textarea'});</script>
     </head>
 
     <body class="app-ui layout-has-drawer layout-has-fixed-header">

@@ -5,21 +5,27 @@
         <section class="section section-contact section-on-bg">
           <div class="container">
             <div class="caption bg-inverse text-center">
-              <h2 class="title">Contact us</h2>
-              <p class="intro">Frontline small-scale farmers forward-thinking sanitation enable giving rural.</p>
+              <h2 class="title">We'd love to talk with you</h2>
+              <p class="intro">Brief us your requirements below, and let's connect</p>
             </div>
-            <form id="contact-form" class="contact-form" method="post" action="">
+            @include('errors')
+            @include('success')
+            <form id="contact-form" class="contact-form" method="post" action="/leads">
+              @csrf
               <div class="contact-form-inner col-md-offset-2 col-md-8">
                 <div class="row">
                   <div class="form-group col-xs-12 col-sm-6">
                     <label class="sr-only" for="cname">Your name</label>
-                    <input type="text" class="form-control" id="cname" name="name" placeholder="Your name" minlength="2" required> </div>
+                    <input type="text" class="form-control login-email" id="cname" name="name" placeholder="Your name" minlength="2" value="{{old('name')}}" required> </div>
                   <div class="form-group col-xs-12 col-sm-6">
                     <label class="sr-only" for="cemail">Email address</label>
-                    <input type="email" class="form-control" id="cemail" name="email" placeholder="Your email address" required> </div>
+                    <input type="email" class="form-control" value="{{old('email')}}" id="cemail" name="email" placeholder="Your email address" required> </div>
+                    <div class="form-group col-xs-12 col-sm-12">
+                    <label class="sr-only" for="cemail">Phone Number</label>
+                    <input type="text" class="form-control" id="cemail" name="phone" value="{{old('phone')}}" placeholder="Your phone number" required> </div>
                   <div class="form-group col-xs-12">
                     <label class="sr-only" for="cmessage">Your message</label>
-                    <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="12" required></textarea>
+                    <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="12" required>{{old('message')}}</textarea>
                   </div>
                   <div class="form-group col-xs-12">
                     <button type="submit" class="btn btn-block btn-cta btn-cta-primary">Send Message</button>

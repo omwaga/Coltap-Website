@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class PagesController extends Controller
 {
@@ -13,7 +14,9 @@ class PagesController extends Controller
 
     public function services()
     {
-    	return view('services');
+        $products = Product::all();
+
+    	return view('services', compact('products'));
     }
 
     public function pricing()

@@ -38,6 +38,7 @@ Route::get('/blogarchive', 'PagesController@blogarchive')->name('blogarchive');
 Route::get('/userlogin', 'PagesController@userlogin')->name('userlogin');
 Route::get('/signup', 'PagesController@signup')->name('signup');
 Route::get('/reset-password', 'PagesController@reset_password')->name('reset-password');
+Route::resource('leads', 'LeadsController');
 
 Auth::routes();
 

@@ -37,7 +37,7 @@
                         <li class="disabled">
                           <i class="material-icons">close</i>24/7 support</li>
                       </ul>
-                      <a class="btn btn-cta btn-cta-primary btn-lg" href="signup.html">Start free trial</a>
+                      <a class="btn btn-cta btn-cta-primary btn-lg" href="{{route('contactus')}}">Quick Enquiry</a>
                     </div>
                     <!-- .content -->
                   </div>
@@ -70,7 +70,7 @@
                         <li class="disabled">
                           <i class="material-icons">close</i>24/7 support</li>
                       </ul>
-                      <a class="btn btn-cta btn-cta-primary btn-lg" href="signup.html">Start free trial</a>
+                      <a class="btn btn-cta btn-cta-primary btn-lg" href="{{route('contactus')}}">Quick Enquiry</a>
                     </div>
                     <!-- .content -->
                     <div class="ribbon">
@@ -107,7 +107,7 @@
                         <li>
                           <i class="material-icons">check</i>24/7 support</li>
                       </ul>
-                      <a class="btn btn-cta btn-cta-primary btn-lg" href="signup.html">Start free trial</a>
+                      <a class="btn btn-cta btn-cta-primary btn-lg" href="{{route('contactus')}}">Quick Enquiry</a>
                     </div>
                     <!-- .content -->
                   </div>
