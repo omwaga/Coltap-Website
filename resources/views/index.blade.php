@@ -29,15 +29,15 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                  <h2 class="title text-center">How does it work?</h2>
-                  <p class="intro text-center">Explain your product's core idea here. Then, explain your product features or benefits in a few steps.</p>
+                  <h2 class="title text-center">Obsessed with Quality!</h2>
+                  <p class="intro text-center">Yes, at AcodeM, we're obsessed with quality. We rely on our portfolio to do business and always ensure that each of our web or mobile deliverable is unique and world class..</p>
                 </div>
               </div>
               <div class="row item">
                 <div class="content col-md-4">
-                  <h3 class="title">Designed with business needs in mind</h3>
+                  <h3 class="title">Let's talk about what we can build together</h3>
                   <div class="desc">
-                    <p>Accessibility diversity crisis situation growth achieve youth. Global network advancement partner investment collaborative.</p>
+                    <p>Whatever may be your requirement - be it a simple website design, a complex data driven web application development, an ecommerce website, a native or cross platform mobile app development, a logo and brand identity design, a video production or a full fledged digital marketing campaign - we have a solution for you.</p>
                   </div>
                   <div class="quote">
                     <div class="quote-profile">
@@ -56,18 +56,89 @@
                 </div>
                 <!-- .content -->
                 <figure class="figure col-md-6 col-md-offset-2 js-animate" data-vc-animation="transition.slideUpIn" data-vc-duration="700">
-                  <img class="img-responsive img-placeholder" src="images/figures/figure-1.png" width="555" height="370" alt="" />
+                  <img class="img-responsive img-placeholder" src="images/cycle-3.gif" width="555" height="370" alt="" />
                   <div class="control text-center">
                     <button type="button" class="play-trigger material-icons md-36" style="font-size: 36px; vertical-align: middle;" data-toggle="modal" data-target="#modal-video">play_arrow</button>
                   </div>
                   <!-- .control -->
-                  <figcaption class="figure-caption">(Screenshot: Responsive Website Template)</figcaption>
                 </figure>
               </div>
             </div>
             <!-- .container -->
           </section>
-          <!-- End About -->  
+          <!-- End About --> 
+<div class="container">
+    <h2>OUR SERVICES</h2>
+  <div class="row">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div class="our-services-wrapper mb-60">
+              <div class="services-inner">
+                <div class="our-services-img">
+                <img src="images/service.png" width="68px" alt="">
+                </div>
+                <div class="our-services-text">
+                  <h4>business growth</h4>
+                  <p>Proin varius pellentesque nuncia tincidunt ante. In id lacus</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div class="our-services-wrapper mb-60">
+              <div class="services-inner">
+                <div class="our-services-img">
+                <img src="images/service.png" width="68px" alt="">
+                </div>
+                <div class="our-services-text">
+                  <h4>business growth</h4>
+                  <p>Proin varius pellentesque nuncia tincidunt ante. In id lacus</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div class="our-services-wrapper mb-60">
+              <div class="services-inner">
+                <div class="our-services-img">
+                <img src="images/service.png" width="68px" alt="">
+                </div>
+                <div class="our-services-text">
+                  <h4>business growth</h4>
+                  <p>Proin varius pellentesque nuncia tincidunt ante. In id lacus</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  </div>
+</div> 
+
+<div class="container-fluid">
+    <div class="container d-flex align-items-center justify-content-center">
+        <article class="portfolio-item device tablet left flex-order-tablet_0 responsive-design video-design device-list">
+            <div class="device-hardware">
+        <a class="hover-trigger" href="" target="_blank">
+          <span class="device-screen" style="background-image: url(https://sunlimetech.com/portfolio/tabletstyleportfolio/imgs/sunlimetechwebdevelopmentfiverr.png);">
+            <span class="hover-name">Hire Sunlimetech on Fiverr</span>
+          </span>
+          <i class="hover-icon fa fa-external-link"></i>
+        </a>
+            </div>
+        </article>
+    
+    <article class="portfolio-item device tablet left flex-order-tablet_0 responsive-design video-design device-list">
+            <div class="device-hardware">
+        <a class="hover-trigger" href="" target="_blank">
+          <span class="device-screen" style="background-image: url(https://sunlimetech.com/portfolio/tabletstyleportfolio/imgs/sunlimetechbootstrapexpert.png);">
+            <span class="hover-name">Contact Sunlimetech</span>
+          </span>
+          <i class="hover-icon fa fa-external-link"></i>
+        </a>
+            </div>
+        </article>
+    </div>
+</div>
+
+
           <!-- Testimonials -->
           <section class="section section-testimonials bg-gray">
             <div class="container">

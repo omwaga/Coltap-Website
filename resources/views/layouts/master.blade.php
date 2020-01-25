@@ -21,6 +21,8 @@
     <link rel="stylesheet" id="css-font-awesome" href="{{ asset('vendor/font-awesome/css/font-awesome.min.css')}}" />
     <link rel="stylesheet" id="css-styles" href="{{ asset('styles/style.css')}}" />
     <link rel="stylesheet" id="css-fonts" href="{{ asset('styles/fonts-1.css')}}" />
+    <link href="{{ asset('css/services.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/portfolio.css') }}" rel="stylesheet">
     <!-- End Stylesheets --> 
 
 <style type="text/css">
