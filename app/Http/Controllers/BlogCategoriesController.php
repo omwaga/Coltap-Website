@@ -37,7 +37,14 @@ class BlogCategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = $request->validate([
+            'name' => ['required', 'min:3'],
+            'description' => ['required', 'min:25']
+        ]);
+
+        BlogCategory::create($attributes);
+
+        return redirect()->back()->withSuccess('The category has been created successfully!');
     }
 
     /**
@@ -80,8 +87,10 @@ class BlogCategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(BlogCategory $blogcategory)
     {
-        //
+        $blogcategory->delete();
+
+        return back()->withSuccess('Category deleted successfully');
     }
 }

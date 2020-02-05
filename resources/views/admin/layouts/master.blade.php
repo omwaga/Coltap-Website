@@ -1,257 +1,216 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html class="app-ui">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <title>Meter - Responsive Admin Dashboard Template</title>
 
-    <head>
-        <!-- Meta -->
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!--Begin  Page Level  CSS -->
+    <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
+     <!--End  Page Level  CSS -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/admin-style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="js/html5shiv.min.js"></script>
+          <script src="js/respond.min.js"></script>
+    <![endif]-->
 
-        <!-- Document title -->
-        <title>Dashboard | The Coltap</title>
+</head>
 
-        <meta name="description" content="AppUI - Admin Dashboard Template & UI Framework" />
-        <meta name="author" content="rustheme" />
-        <meta name="robots" content="noindex, nofollow" />
+<body class="sticky-header">
 
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png" />
-        <link rel="icon" href="assets/img/favicons/favicon.ico" />
 
-        <!-- Google fonts -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,900%7CRoboto+Slab:300,400%7CRoboto+Mono:400" />
+    <!--Start left side Menu-->
+    <div class="left-side sticky-left-side">
 
-        <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/js/plugins/slick/slick.min.css')}}" />
-        <link rel="stylesheet" href="{{ asset('assets/js/plugins/slick/slick-theme.min.css')}}" />
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+        </div>
 
-        <!-- AppUI CSS stylesheets -->
-        <link rel="stylesheet" id="css-font-awesome" href="{{ asset('assets/css/font-awesome.css')}}" />
-        <link rel="stylesheet" id="css-ionicons" href="{{ asset('assets/css/ionicons.css')}}" />
-        <link rel="stylesheet" id="css-bootstrap" href="{{ asset('assets/css/bootstrap.css')}}" />
-        <link rel="stylesheet" id="css-app" href="{{ asset('assets/css/app.css')}}" />
-        <link rel="stylesheet" id="css-app-custom" href="{{ asset('assets/css/app-custom.css')}}" />
-        <!-- End Stylesheets -->
-        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>tinymce.init({selector:'textarea'});</script>
-    </head>
+        <div class="logo-icon text-center">
+            <a href="index.html"><img src="assets/images/logo-icon.png" alt=""></a>
+        </div>
+        <!--logo-->
 
-    <body class="app-ui layout-has-drawer layout-has-fixed-header">
-        <div class="app-layout-canvas">
-            <div class="app-layout-container">
+        <div class="left-side-inner">
+            <!--Sidebar nav-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="nav-active"><a href=""><i class="icon-home"></i> <span>Dashboard</span></a>
+                </li>
 
-                <!-- Drawer -->
-                <aside class="app-layout-drawer">
+                <li class="menu-list"><a href=""><i class="icon-layers"></i> <span>We Do</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="/weare"> All Dos</a></li>
+                    </ul>
+                </li>
 
-                    <!-- Drawer scroll area -->
-                    <div class="app-layout-drawer-scroll">
-                        <!-- Drawer logo -->
-                        <div id="logo" class="drawer-header">
-                            <a href="index.html"><img class="img-responsive" src="assets/img/logo/logo-backend.png" title="AppUI" alt="AppUI" /></a>
-                        </div>
+                <li class="menu-list"><a href="#"><i class="icon-envelope-open"></i> <span>Mail</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="inbox.html"> Inbox</a></li>
+                        <li><a href="compose.html"> Compose Mail</a></li>
+                        <li><a href="message-view.html"> View Mail</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="calendar.html"><i class="icon-note"></i> <span>Calendar</span></a></li>
+                 <li><a href="widget.html"><i class="icon-wrench"></i> <span>Widget</span></a></li>
+                
+                <li class="menu-list"><a href="#"><i class="icon-pie-chart"></i> <span>Charts</span></a>
+                    <ul class="sub-menu-list">
+                    <li><a href="flot-chart.html"> Flot Charts</a></li>
+                    <li><a href="morris-chart.html"> Morris Charts</a></li>
+                    <li><a href="chart-js.html"> Chartjs</a></li>
+                    <li><a href="chart-sparkline.html"> Chart Sparkline</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href="#"><i class="icon-lock"></i> <span>Login</span></a>
+                    <ul class="sub-menu-list">
+                       <li><a href="login.html"> Login </a></li>
+                       <li><a href="forgot-password.html"> Forgot Password </a></li>
+                        <li><a href="registration.html"> Registration </a></li>
+                        <li><a href="locked.html"> Lockscreen </a></li>
+                    </ul>
+                </li>
 
-                        <!-- Drawer navigation -->
-                        <nav class="drawer-main">
-                            <ul class="nav nav-drawer">
+            </ul>
+            <!--End sidebar nav-->
 
-                                <li class="nav-item nav-drawer-header">Menu</li>
+        </div>
+    </div>
+    <!--End left side menu-->
+    
+    
+    <!-- main content start-->
+    <div class="main-content" >
 
-                                <li class="nav-item active">
-                                    <a href="/dashboard"><i class="ion-ios-speedometer-outline"></i> Dashboard</a>
-                                </li>
+        <!-- header section start-->
+        <div class="header-section">
 
-                                <li class="nav-item">
-                                    <a href="{{route('admin-aboutus')}}"><i class="ion-ios-monitor-outline"></i> About Us</a>
-                                </li>
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
 
-                                <li class="nav-item nav-drawer-header">Components</li>
+            <form class="searchform">
+                <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+            </form>
 
-                                <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="ion-ios-calculator-outline"></i> Services</a>
-                                    <ul class="nav nav-subnav">
-
-                                        <li>
-                                            <a href="/services/create">New Service</a>
-                                        </li>
-                                        <li>
-                                            <a href="/services">Manage Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('manageservices')}}">Active Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('inactiveservices')}}">Inactive Services</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="ion-ios-calculator-outline"></i> Blog</a>
-                                    <ul class="nav nav-subnav">
-
-                                        <li>
-                                            <a href="/blogcategories">Blog Categories</a>
-                                        </li>
-                                        <li>
-                                            <a href="/blogposts/create">Blog Articles</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('allarchives')}}">Blog Archives</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="ion-ios-calculator-outline"></i> Customers</a>
-                                    <ul class="nav nav-subnav">
-
-                                        <li>
-                                            <a href="/customers">All Customers</a>
-                                        </li>
-                                        <li>
-                                            <a href="/customers/create">New Customer</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge">8</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">You have 8 pending task</h5>
+                            <ul class="dropdown-list">
+                            <li class="notification-scroll-list notification-list ">
+                               <!-- list item-->
+                               <a href="javascript:void(0);" class="list-group-item">
+                                  <div class="media">
+                                     <div class="pull-left p-r-10">
+                                        <em class="fa  fa-shopping-cart noti-primary"></em>
+                                     </div>
+                                     <div class="media-body">
+                                        <h5 class="media-heading">A new order has been placed.</h5>
+                                        <p class="m-0">
+                                            <small>29 min ago</small>
+                                        </p>
+                                     </div>
+                                  </div>
+                               </a>
+                             </li>
+                             <li class="last"> <a href="#">View all notifications</a> </li>
                             </ul>
-                        </nav>
-                        <!-- End drawer navigation -->
-
-                        <div class="drawer-footer">
-                            <p class="copyright">The Coltap &copy;</p>
-                            <a href="#" target="_blank" rel="nofollow">Inspired by Best</a>
                         </div>
-                    </div>
-                    <!-- End drawer scroll area -->
-                </aside>
-                <!-- End drawer -->
-
-                <!-- Header -->
-                <header class="app-layout-header">
-                    <nav class="navbar navbar-default">
-                        <div class="container-fluid">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-                                <button class="pull-left hidden-lg hidden-md navbar-toggle" type="button" data-toggle="layout" data-action="sidebar_toggle">
-					<span class="sr-only">Toggle drawer</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-                                <span class="navbar-page-title">
-					
-					Dashboard
-				</span>
-                            </div>
-
-                            <div class="collapse navbar-collapse" id="header-navbar-collapse">
-                                <!-- Header search form -->
-                                <form class="navbar-form navbar-left app-search-form" role="search">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input class="form-control" type="search" id="search-input" placeholder="Search..." />
-                                            <span class="input-group-btn">
-								<button class="btn" type="button"><i class="ion-ios-search-strong"></i></button>
-							</span>
-                                        </div>
-                                    </div>
-                                </form>
-                                <!-- .navbar-left -->
-
-                                <ul class="nav navbar-nav navbar-right navbar-toolbar hidden-sm hidden-xs">
-                                    <li>
-                                        <!-- Opens the modal found at the bottom of the page -->
-                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#apps-modal"><i class="ion-grid"></i></a>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="javascript:void(0)" data-toggle="dropdown"><i class="ion-ios-bell"></i> <span class="badge">3</span></a>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li class="dropdown-header">Profile</li>
-                                            <li>
-                                                <a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span> Messages </a>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <li class="dropdown-header">More</li>
-                                            <li>
-                                                <a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown dropdown-profile">
-                                        <a href="javascript:void(0)" data-toggle="dropdown">
-                                            <span class="m-r-sm">{{auth()->user()->name}} <span class="caret"></span></span>
-                                            <img class="img-avatar img-avatar-48" src="{{ asset('assets/img/avatars/avatar3.jpg')}}" alt="User profile pic" />
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li class="dropdown-header">
-                                                Pages
-                                            </li>
-                                            <li>
-                                                <a href="base_pages_profile.html">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="base_pages_profile.html"><span class="badge badge-success pull-right">3</span> Blog</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Logout</a>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                         <h5 class="title">Notifications</h5>
+                        <ul class="dropdown-list normal-list">
+                         <li class="message-list message-scroll-list">
+                          <a href="#">
+                              <span class="photo"> <img src="assets/images/users/avatar-8.jpg" class="img-circle" alt="img"></span>
+                              <span class="subject">John Doe</span>
+                              <span class="message"> New tasks needs to be done</span>
+                               <span class="time">15 minutes ago</span>
+                          </a>
+                        </li>
+                        <li class="last"> <a  href="#">All Messages</a> </li>
+                    </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/users/avatar-6.jpg" alt="" />
+                            John Doe
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                          <li> <a href="#"> <i class="fa fa-wrench"></i> Settings </a> </li>
+                          <li> <a href="#"> <i class="fa fa-user"></i> Profile </a> </li>
+                          <li> <a href="#"> <i class="fa fa-info"></i> Help </a> </li>
+                          <li> <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"> <i class="fa fa-lock"></i>  Logout </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- .navbar-right -->
-                            </div>
-                        </div>
-                        <!-- .container-fluid -->
-                    </nav>
-                    <!-- .navbar-default -->
-                </header>
-                <!-- End header -->
+                          </li>
+                        </ul>
+                    </li>
 
-                @yield('content')
+                </ul>
+            </div>
+            <!--notification menu end -->
 
-                 <!-- AppUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock and App.js -->
-        <script src="{{ asset('assets/js/core/jquery.min.js')}}"></script>
-        <script src="{{ asset('assets/js/core/bootstrap.min.js')}}"></script>
-        <script src="{{ asset('assets/js/core/jquery.slimscroll.min.js')}}"></script>
-        <script src="{{ asset('assets/js/core/jquery.scrollLock.min.js')}}"></script>
-        <script src="{{ asset('assets/js/core/jquery.placeholder.min.js')}}"></script>
-        <script src="{{ asset('assets/js/app.js')}}"></script>
-        <script src="{{ asset('assets/js/app-custom.js')}}"></script>
+        </div>
+        <!-- header section end-->
 
-        <!-- Page Plugins -->
-        <script src="{{ asset('assets/js/plugins/slick/slick.min.js')}}"></script>
-        <script src="{{ asset('assets/js/plugins/chartjs/Chart.min.js')}}"></script>
-        <script src="{{ asset('assets/js/plugins/flot/jquery.flot.min.js')}}"></script>
-        <script src="{{ asset('assets/js/plugins/flot/jquery.flot.pie.min.js')}}"></script>
-        <script src="{{ asset('assets/js/plugins/flot/jquery.flot.stack.min.js')}}"></script>
-        <script src="{{ asset('assets/js/plugins/flot/jquery.flot.resize.min.js')}}"></script>
+@yield('content')
 
-        <!-- Page JS Code -->
-        <script src="{{ asset('assets/js/pages/index.js')}}"></script>
-        <script>
-            $(function()
-            {
-                // Init page helpers (Slick Slider plugin)
-                App.initHelpers('slick');
-            });
-        </script>
 
-    </body>
+        <!--Start  Footer -->
+        <footer class="footer-main"> <script>document.write(new Date().getFullYear())</script> &copy; AcodeM  </footer>   
+         <!--End footer -->
+
+       </div>
+      <!--End main content -->
+    
+
+
+    <!--Begin core plugin -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/moment/moment.js"></script>
+    <script  src="assets/js/jquery.slimscroll.js "></script>
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <!-- End core plugin -->
+    
+    <!--Begin Page Level Plugin-->
+    <script src="assets/plugins/morris-chart/morris.js"></script>
+    <script src="assets/plugins/morris-chart/raphael-min.js"></script>
+    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="assets/pages/dashboard.js"></script>
+    <!--End Page Level Plugin-->
+   
+
+</body>
 
 </html>

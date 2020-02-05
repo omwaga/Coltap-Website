@@ -13,7 +13,7 @@ class BlogPostsController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.new-blogpost');
     }
 
     /**
@@ -23,7 +23,6 @@ class BlogPostsController extends Controller
      */
     public function create()
     {
-        return view('admin.new-blogpost');
     }
 
     /**
