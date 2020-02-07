@@ -50,9 +50,21 @@
                 <li class="nav-active"><a href=""><i class="icon-home"></i> <span>Dashboard</span></a>
                 </li>
 
+                <li class="menu-list"><a href=""><i class="icon-layers"></i> <span>Sliders</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="/sliders"> Sliders</a></li>
+                    </ul>
+                </li>
+
                 <li class="menu-list"><a href=""><i class="icon-layers"></i> <span>We Do</span></a>
                     <ul class="sub-menu-list">
                         <li><a href="/weare"> All Dos</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-list"><a href=""><i class="icon-layers"></i> <span>About Us</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="/admin-aboutus"> About Us</a></li>
                     </ul>
                 </li>
 
@@ -201,6 +213,9 @@
     <script  src="assets/js/jquery.slimscroll.js "></script>
     <script src="assets/js/jquery.nicescroll.js"></script>
     <script src="assets/js/functions.js"></script>
+
+  <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="assets/pages/validation-custom.js"></script>
     <!-- End core plugin -->
     
     <!--Begin Page Level Plugin-->

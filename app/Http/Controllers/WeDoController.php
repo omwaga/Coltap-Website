@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\WeDo;
+
 class WeDoController extends Controller
 {
     /**
@@ -13,7 +15,9 @@ class WeDoController extends Controller
      */
     public function index()
     {
-     return view('admin.we-do');
+        $we_dos = WeDo::all();
+
+        return view('admin.we-do', compact('we_dos'));
     }
 
     /**
@@ -34,7 +38,14 @@ class WeDoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'title' => ['required', 'min:3'],
+            'description' =>['required', 'min:15']
+        ]);
+        
+        WeDo::create($attributes);
+
+        return redirect()->back()->with('message', 'The WeDO item has been created succesfully');
     }
 
     /**

@@ -61,7 +61,7 @@ var BaseFormValidation = function() {
             },
             messages: {
                 'val-username': {
-                    required: 'Please enter a username',
+                    required: 'This field is required',
                     minlength: 'Your username must consist of at least 3 characters'
                 },
                 'val-email': 'Please enter a valid email address',
@@ -74,7 +74,7 @@ var BaseFormValidation = function() {
                     minlength: 'Your password must be at least 5 characters long',
                     equalTo: 'Please enter the same password as above'
                 },
-                'val-suggestions': 'What can we do to become better?',
+                'val-suggestions': 'This field is required',
                 'val-skill': 'Please select a skill!',
                 'val-website': 'Please enter your website!',
                 'val-digits': 'Please enter only digits!',

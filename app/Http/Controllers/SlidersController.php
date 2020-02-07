@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Slider;
+
 class SlidersController extends Controller
 {
     /**
@@ -13,7 +15,9 @@ class SlidersController extends Controller
      */
     public function index()
     {
-        //
+        $sliders = Slider::all();
+
+        return view('admin.sliders', compact('sliders'));
     }
 
     /**
@@ -34,7 +38,14 @@ class SlidersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'title' => ['required', 'min:3'],
+            'description' =>['required', 'min:15']
+        ]);
+        
+        Slider::create($attributes);
+
+        return redirect()->back()->with('message', 'The Slider item has been created succesfully');
     }
 
     /**

@@ -26,6 +26,7 @@ Route::resource('blogposts', 'BlogPostsController');
 Route::get('/blog-archives', 'ArchivesController@allarchives')->name('allarchives');
 Route::resource('customers', 'CustomersController');
 Route::resource('weare', 'WeDoController');
+Route::resource('sliders', 'SlidersController');
 // Public Routes
 Route::get('/our-services', 'PagesController@services')->name('services');
 Route::get('/pricing', 'PagesController@pricing')->name('pricing');

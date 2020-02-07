@@ -13,6 +13,6 @@ class AdminController extends Controller
 
     public function about()
     {
-    	return view('admin.aboutus');
+    	return view('admin.about-us');
     }
 }

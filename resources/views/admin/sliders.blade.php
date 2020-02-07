@@ -22,27 +22,27 @@
               <div class="row">
                   <div class="col-md-8">
                     <div class="white-box">
-                      @include('success')
                       @include('errors')
-                        <form class="js-validation-bootstrap form-horizontal" method="post" action="/weare">
+                      @include('success')
+                        <form class="js-validation-bootstrap form-horizontal" method="post" action="/sliders">
                           @csrf
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-username">Title <span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                              <input class="form-control" type="text" id="val-username" name="title" placeholder="Enter User Name">
+                              <input class="form-control" value="{{old('title')}}" type="text" id="val-username" name="title" placeholder="Enter Title">
                             </div>
                           </div>
                            <div class="form-group">
                             <label class="col-md-3 control-label" for="val-suggestions">Description <span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                              <textarea class="form-control" id="val-suggestions" name="description" rows="14" placeholder="About"></textarea>
+                              <textarea class="form-control" id="val-suggestions" name="description" rows="14" placeholder="Description">{{old('description')}}</textarea>
                             </div>
                           </div>
                            <input type="submit" value="Post" class="btn btn-primary pull-right">
                         </form>
                     </div> <!--/.hite-box-->
-                     
-                     @foreach($we_dos as $we_do)                 
+                            
+                    @foreach($sliders as $slider)          
                       <div class="white-box">
                           <div class="post-header">
                           <div class="post-author-media">
@@ -50,17 +50,17 @@
                           </div>
                           
                           <div class="post-author">
-                            <h4>{{$we_do->title}}</h4>
+                            <h4>{{$slider->title}}</h4>
                             <p>2 hours ago</p>
                           </div>
                           </div> <!-- /.post-header-->
                           
                           <div class="post-desc">
-                              <p>{{$we_do->description}}</p>
+                              <p>{{$slider->description}}</p>
                           </div>
                           
                       </div><!-- /.white-box-->
-                      @endforeach
+                    @endforeach
                       
                   </div> <!--/.col-md-8-->
                   
