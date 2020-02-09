@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\About;
+
 class AboutsController extends Controller
 {
     /**
@@ -23,7 +25,6 @@ class AboutsController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -34,7 +35,14 @@ class AboutsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'title' => ['required', 'min:3'],
+            'description' => ['required', 'min:3']
+        ]);
+
+        About::create($attributes);
+
+        return back()->with('message', 'The about information has been created successfully');
     }
 
     /**
@@ -54,9 +62,9 @@ class AboutsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(About $about)
     {
-        //
+        return $about;
     }
 
     /**
@@ -66,9 +74,11 @@ class AboutsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(About $about)
     {
-        //
+        $about->update(request(['title', 'description']));
+
+        return back()->with('message', 'The about information has been deleted successfully');
     }
 
     /**
