@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PagesController@index');
 // Admin Routes
 Route::get('/admin', 'PagesController@admin')->name('admin');
 Route::get('/dashboard', 'AdminController@index')->name('adminindex');

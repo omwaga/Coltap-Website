@@ -79,7 +79,11 @@ class WeDoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $id = WeDo::where('id', $id)->first();
+
+        $id->update(request(['title', 'description']));
+
+        return back()->with('message', 'The WeDo item has been updated successfully');
     }
 
     /**

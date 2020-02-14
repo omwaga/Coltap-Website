@@ -51,7 +51,7 @@
                           
                           <div class="post-author">
                             <h4>{{$slider->title}}</h4>
-                            <p><button class="btn btn-info" data-toggle="modal" data-target="#modal-{{$slider->id}}" type="button">Edit</button></p>
+                            <p><button class="btn btn-info" data-toggle="modal" data-target="#modal-{{$slider->id}}">Edit</button></p>
                           </div>
                           </div> <!-- /.post-header-->
                           
@@ -60,29 +60,7 @@
                           </div>
                           
                       </div><!-- /.white-box-->
-                    @endforeach
-                      
-                  </div> <!--/.col-md-8-->
-                  
-                  
-                  <div class="col-md-4">
-                  
-                      <div class="white-box">
-                        <h2 class="header-title">About</h2
-                        ><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque incidunt cumque, dolore eveniet porro asperiores itaque! Eligendi minus cupiditate molestiae praesentium, facilis, neque saepe, soluta sapiente aliquid modi sunt.</p>
-                      </div> <!--/.white-box-->
-                      
-                  </div> <!--/.col-md-4-->
-                  
-              </div>
-              <!--End row-->
-           
-           
-           
-			    </div>
-        <!-- End Wrapper-->
-
-        <!-- Normal Modal -->
+                      <!-- Normal Modal -->
             <div  id="modal-{{$slider->id}}" class="modal fade" role="dialog">
               <div class="modal-dialog">
          <!-- Modal content-->
@@ -118,4 +96,27 @@
               </div>
             </div>
              <!-- END Normal Modal -->
+                    @endforeach
+                      
+                  </div> <!--/.col-md-8-->
+                  
+                  
+                  <div class="col-md-4">
+                  
+                      <div class="white-box">
+                        <h2 class="header-title">About</h2
+                        ><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque incidunt cumque, dolore eveniet porro asperiores itaque! Eligendi minus cupiditate molestiae praesentium, facilis, neque saepe, soluta sapiente aliquid modi sunt.</p>
+                      </div> <!--/.white-box-->
+                      
+                  </div> <!--/.col-md-4-->
+                  
+              </div>
+              <!--End row-->
+           
+           
+           
+			    </div>
+        <!-- End Wrapper-->
+
+        
 @endsection

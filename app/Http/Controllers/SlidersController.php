@@ -77,9 +77,11 @@ class SlidersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Slider $slider)
     {
-        //
+        $slider->update(request(['title', 'description']));
+
+        return back()->with('message', 'The slider item has been updated succesfully!');
     }
 
     /**

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\BlogArticle;
+use App\BlogCategory;
 
 class BlogPostsController extends Controller
 {
@@ -13,7 +15,10 @@ class BlogPostsController extends Controller
      */
     public function index()
     {
-        return view('admin.new-blogpost');
+        $articles = BlogArticle::all();
+        $categories = BlogCategory::all();
+
+        return view('admin.blog-articles', compact('articles', 'categories'));
     }
 
     /**

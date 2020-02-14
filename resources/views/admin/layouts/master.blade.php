@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
-  <title>Meter - Responsive Admin Dashboard Template</title>
+  <title>Acodem - admin Back-end</title>
 
     <!--Begin  Page Level  CSS -->
     <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
@@ -67,32 +67,20 @@
                         <li><a href="/admin-aboutus"> About Us</a></li>
                     </ul>
                 </li>
+                
+                <li class="menu-list"><a href="#"><i class="icon-pie-chart"></i> <span>Blog</span></a>
+                    <ul class="sub-menu-list">
+                    <li><a href="/blogcategories"> Blog Categories</a></li>
+                    <li><a href="/blogposts"> Blog Articles</a></li>
+                    </ul>
+                </li>
+                
 
                 <li class="menu-list"><a href="#"><i class="icon-envelope-open"></i> <span>Mail</span></a>
                     <ul class="sub-menu-list">
                         <li><a href="inbox.html"> Inbox</a></li>
                         <li><a href="compose.html"> Compose Mail</a></li>
                         <li><a href="message-view.html"> View Mail</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="calendar.html"><i class="icon-note"></i> <span>Calendar</span></a></li>
-                 <li><a href="widget.html"><i class="icon-wrench"></i> <span>Widget</span></a></li>
-                
-                <li class="menu-list"><a href="#"><i class="icon-pie-chart"></i> <span>Charts</span></a>
-                    <ul class="sub-menu-list">
-                    <li><a href="flot-chart.html"> Flot Charts</a></li>
-                    <li><a href="morris-chart.html"> Morris Charts</a></li>
-                    <li><a href="chart-js.html"> Chartjs</a></li>
-                    <li><a href="chart-sparkline.html"> Chart Sparkline</a></li>
-                    </ul>
-                </li>
-                <li class="menu-list"><a href="#"><i class="icon-lock"></i> <span>Login</span></a>
-                    <ul class="sub-menu-list">
-                       <li><a href="login.html"> Login </a></li>
-                       <li><a href="forgot-password.html"> Forgot Password </a></li>
-                        <li><a href="registration.html"> Registration </a></li>
-                        <li><a href="locked.html"> Lockscreen </a></li>
                     </ul>
                 </li>
 

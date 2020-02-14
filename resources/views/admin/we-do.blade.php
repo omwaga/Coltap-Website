@@ -51,7 +51,7 @@
                           
                           <div class="post-author">
                             <h4>{{$we_do->title}}</h4>
-                            <p>2 hours ago</p>
+                            <p><button class="btn btn-info" data-toggle="modal" data-target="#modal-{{$we_do->id}}">Edit</button></p>
                           </div>
                           </div> <!-- /.post-header-->
                           
@@ -60,6 +60,43 @@
                           </div>
                           
                       </div><!-- /.white-box-->
+
+                      <!-- Normal Modal -->
+            <div  id="modal-{{$we_do->id}}" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+         <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form class="" method="post" action="/weare/{{$we_do->id}}">
+                          @csrf
+                          @method('PATCH')
+                          <div class="form-group">
+                            <label class="col-md-3 control-label" for="val-username">Title <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                              <input class="form-control" value="{{$we_do->title}}" type="text" id="val-username" name="title" placeholder="Enter Title">
+                            </div>
+                          </div>
+                           <div class="form-group">
+                            <label class="col-md-3 control-label" for="val-suggestions">Description <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                              <textarea class="form-control" id="val-suggestions" name="description" rows="14" placeholder="Description">{{$we_do->description}}</textarea>
+                            </div>
+                          </div>
+                           <input type="submit" value="Post" class="btn btn-primary pull-right">
+                        </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+             <!-- END Normal Modal -->
                       @endforeach
                       
                   </div> <!--/.col-md-8-->
