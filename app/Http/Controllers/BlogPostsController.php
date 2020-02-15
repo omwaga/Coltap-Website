@@ -38,7 +38,16 @@ class BlogPostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'title' => ['required', 'min:3'],
+            'category_id' => 'required',
+            'description' => ['required', 'min:3']
+        ]);
+
+        BlogArticle::create($attributes);
+
+        return back()->with('message', 'The blog article has been created successfully');
+
     }
 
     /**
@@ -58,9 +67,11 @@ class BlogPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(BlogArticle $blogpost)
     {
-        //
+        $categories = BlogCategory::all();
+
+        return view('admin.edit-article', compact('blogpost', 'categories'));
     }
 
     /**
@@ -70,9 +81,11 @@ class BlogPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BlogArticle $blogpost)
     {
-        //
+        $blogpost->update(request(['title', 'category_id', 'description']));
+
+        return redirect('/blogposts')->with('message', 'The blog article has been updated successfully');
     }
 
     /**

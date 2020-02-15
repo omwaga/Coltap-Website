@@ -45,7 +45,7 @@
                                      <img src="assets/images/users/avatar-1.jpg"  alt=""/>
                                  </div>
                                  <div class="user-info">
-                                    <h4><a href="/blogarticles/{{$article->id}}/edit">{{$article->title}}</a></h4>
+                                    <h4><a href="/blogposts/{{$article->id}}/edit">{{$article->title}}</a></h4>
                                     <p><strong>Category:</strong>  {{$article->category->name}}</p>
                                     <span><strong>Posted By:</strong>  {{auth()->user()->name}}</span>
                                  </div>
@@ -57,7 +57,7 @@
               </div>
               <!--End row-->
                        @else
-                         <form class="js-validation-bootstrap form-horizontal" action="/blogarticles" method="post">
+                         <form class="js-validation-bootstrap form-horizontal" action="/blogposts" method="post">
                              @csrf
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-username">Title: <span class="text-danger">*</span></label>
@@ -79,7 +79,7 @@
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-suggestions">Description: <span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                              <textarea class="form-control ckeditor" id="val-suggestions" name="description" rows="14" placeholder="Category Description">{{old('description')}}</textarea>
+                              <textarea class="form-control wysihtml5-textarea" id="val-suggestions" name="description" rows="14" placeholder="Category Description">{{old('description')}}</textarea>
                             </div>
                           </div>
                           <div class="form-group">
@@ -108,7 +108,7 @@
                     <h4 class="modal-title">New Category</h4>
                   </div>
                   <div class="modal-body">
-                      <form class="js-validation-bootstrap form-horizontal" action="/blogarticles" method="post">
+                      <form class="js-validation-bootstrap form-horizontal" action="/blogposts" method="post">
                              @csrf
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-username">Title: <span class="text-danger">*</span></label>
@@ -130,7 +130,7 @@
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-suggestions">Description: <span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                              <textarea class="form-control ckeditor" id="val-suggestions" name="description" rows="14" placeholder="Category Description">{{old('description')}}</textarea>
+                              <textarea class="form-control wysihtml5-textarea" id="val-suggestions" name="description" rows="14" placeholder="Category Description">{{old('description')}}</textarea>
                             </div>
                           </div>
                           <div class="form-group">

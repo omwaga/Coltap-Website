@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Lead;
 
 class LeadsController extends Controller
 {
@@ -40,8 +41,10 @@ class LeadsController extends Controller
             'email' => ['required', 'min:3'],
             'message' => ['required', 'min:25'],
         ]);
+        
+        Lead::create($attributes);
 
-        return redirect()->back()->withSuccess('Message has been sent Successfully!');
+        return redirect()->back()->with('message', 'Message has been sent Successfully!');
     }
 
     /**

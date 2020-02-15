@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\BlogArticle;
 
 class PagesController extends Controller
 {
@@ -45,7 +46,9 @@ class PagesController extends Controller
 
     public function fromblog()
     {
-    	return view('blog.blog');
+        $articles = BlogArticle::all();
+
+    	return view('blog.blog', compact('articles'));
     }
 
     public function blog()

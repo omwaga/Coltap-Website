@@ -11,13 +11,14 @@
   <title>Acodem - admin Back-end</title>
 
     <!--Begin  Page Level  CSS -->
-    <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
-    <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
+    <link href="{{asset('assets/plugins/morris-chart/morris.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/jquery-ui/jquery-ui.min.css')}}" rel="stylesheet"/>
+    <link href="{{asset('assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css')}}" />
      <!--End  Page Level  CSS -->
-    <link href="assets/css/icons.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/admin-style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin-style.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -195,24 +196,30 @@
 
 
     <!--Begin core plugin -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/moment/moment.js"></script>
-    <script  src="assets/js/jquery.slimscroll.js "></script>
-    <script src="assets/js/jquery.nicescroll.js"></script>
-    <script src="assets/js/functions.js"></script>
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/moment/moment.js')}}"></script>
+    <script  src="{{asset('assets/js/jquery.slimscroll.js')}} "></script>
+    <script src="{{asset('assets/js/jquery.nicescroll.js')}}"></script>
+    <script src="{{asset('assets/js/functions.js')}}"></script>
 
-  <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
-    <script src="assets/pages/validation-custom.js"></script>
+  <script src="{{asset('assets/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('assets/pages/validation-custom.js')}}"></script>
     <!-- End core plugin -->
     
     <!--Begin Page Level Plugin-->
-    <script src="assets/plugins/morris-chart/morris.js"></script>
-    <script src="assets/plugins/morris-chart/raphael-min.js"></script>
-    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
-    <script src="assets/pages/dashboard.js"></script>
+    <script src="{{asset('assets/plugins/morris-chart/morris.js')}}"></script>
+    <script src="{{asset('assets/plugins/morris-chart/raphael-min.js')}}"></script>
+    <script src="{{asset('assets/plugins/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
+    <script src="{{asset('assets/pages/dashboard.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js')}}"></script>
     <!--End Page Level Plugin-->
    
+   <script>
+      $('.textarea').wysihtml5(); 
+    </script>
 
 </body>
 

@@ -30,20 +30,20 @@
                     </div>
                              @include('errors')
                              @include('success')
-                         <form class="js-validation-bootstrap form-horizontal" action="/blogarticles/{{$blogarticle->id}} method="POST">
+                         <form class="js-validation-bootstrap form-horizontal" action="/blogposts/{{$blogpost->id}}" method="POST">
                              @method('PATCH')
                              @csrf
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-username">Title: <span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                              <input class="form-control" type="text" id="val-username" name="title" value="{{$blogarticle->title}}" placeholder="Enter Category Name">
+                              <input class="form-control" type="text" id="val-username" name="title" value="{{$blogpost->title}}" placeholder="Enter Category Name">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-skill">Category: <span class="text-danger">*</span></label>
                             <div class="col-md-9">
                               <select class="form-control ckeditor" id="val-skill" name="category_id">
-                                <option value="{{$blogarticle->category_id}}">{{$blogarticle->category->name}}</option>
+                                <option value="{{$blogpost->category_id}}">{{$blogpost->category->name}}</option>
                                 @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach
@@ -53,7 +53,7 @@
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="val-suggestions">Description: <span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                              <textarea class="form-control ckeditor" id="val-suggestions" name="description" rows="14" placeholder="Category Description">{{$blogarticle->description}}</textarea>
+                              <textarea class="textarea form-control wysihtml5-textarea" id="val-suggestions" name="description" rows="14" placeholder="Category Description">{{$blogpost->description}}</textarea>
                             </div>
                           </div>
                           <div class="form-group">
