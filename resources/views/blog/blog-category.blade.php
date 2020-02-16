@@ -2,21 +2,25 @@
 @section('content')
         <!-- Blog list -->
         <div class="blog blog-category container">
-          <h2 class="page-title text-center">Category: Tech</h2>
+          <h2 class="page-title text-center">Category: {{$name}}</h2>
           <div class="row">
             <div class="blog-list blog-list-list-style col-md-offset-1 col-md-10">
+              @foreach($articles as $article)
+              @if(!$article->category->count())
+              <p>Nothing to show in this category yet</p>
+              @else
               <article class="post">
                 <div class="post-inner row">
                   <div class="col-md-4">
                     <figure class="post-thumb">
                       <a href="blog-single.html">
-                        <img class="img-responsive" src="images/blog/blog-post-1-sm.jpg" alt="" /> </a>
+                        <img class="img-responsive" src="{{asset('images/blog/blog-post-6-sm.jpg')}}" alt="" /> </a>
                     </figure>
                     <!-- .post-thumb -->
                   </div>
                   <div class="content col-md-8">
                     <h3 class="post-title">
-                      <a href="{{route('blog')}}">It's an art backed by science</a>
+                      <a href="{{route('blog', $article->title)}}">{{$article->title}}</a>
                     </h3>
                     <div class="meta">
                       <ul class="meta-list list-inline">
@@ -43,201 +47,8 @@
                 </div>
                 <!-- .post-inner -->
               </article>
-              <!-- .post -->
-              <article class="post">
-                <div class="post-inner row">
-                  <div class="col-md-4">
-                    <figure class="post-thumb">
-                      <a href="blog-single.html">
-                        <img class="img-responsive" src="images/blog/blog-post-2-sm.jpg" alt="" /> </a>
-                    </figure>
-                    <!-- .post-thumb -->
-                  </div>
-                  <div class="content col-md-8">
-                    <h3 class="post-title">
-                      <a href="blog-single.html">You set the goal, we get the results</a>
-                    </h3>
-                    <div class="meta">
-                      <ul class="meta-list list-inline">
-                        <li class="post-time">2 September, 2017</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>4</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                    </div>
-                    <!--meta -->
-                    <div class="post-entry">
-                      <p>Carbon emissions reductions prosperity voice, Nelson Mandela United Nations Global South donate growth...</p>
-                      <a class="read-more" href="blog-single.html">Read more
-                        <i class="material-icons">chevron_right</i>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- .content -->
-                </div>
-                <!-- .post-inner -->
-              </article>
-              <!-- .post -->
-              <article class="post">
-                <div class="post-inner row">
-                  <div class="col-md-4">
-                    <figure class="post-thumb">
-                      <a href="blog-single.html">
-                        <img class="img-responsive" src="images/blog/blog-post-3-sm.jpg" alt="" /> </a>
-                    </figure>
-                    <!-- .post-thumb -->
-                  </div>
-                  <div class="content col-md-8">
-                    <h3 class="post-title">
-                      <a href="blog-single.html">Digital agency rebels</a>
-                    </h3>
-                    <div class="meta">
-                      <ul class="meta-list list-inline">
-                        <li class="post-time">14 September, 2017</li>
-                        <li class="post-author"> by
-                          <a href="#">Andy Gabriel</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>10</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                    </div>
-                    <!--meta -->
-                    <div class="post-entry">
-                      <p>Aenean interdum ligula sed sollicitudin scelerisque. Morbi sed purus erat...</p>
-                      <a class="read-more" href="blog-single.html">Read more
-                        <i class="material-icons">chevron_right</i>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- .content -->
-                </div>
-                <!-- .post-inner -->
-              </article>
-              <!-- .post -->
-              <article class="post">
-                <div class="post-inner row">
-                  <div class="col-md-4">
-                    <figure class="post-thumb">
-                      <a href="blog-single.html">
-                        <img class="img-responsive" src="images/blog/blog-post-4-sm.jpg" alt="" /> </a>
-                    </figure>
-                    <!-- .post-thumb -->
-                  </div>
-                  <div class="content col-md-8">
-                    <h3 class="post-title">
-                      <a href="blog-single.html">Proin lobortis mattis erat</a>
-                    </h3>
-                    <div class="meta">
-                      <ul class="meta-list list-inline">
-                        <li class="post-time">18 September, 2017</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>10</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                    </div>
-                    <!--meta -->
-                    <div class="post-entry">
-                      <p>Benefit cooperation conflict resolution invest; recognize potential disrupt, nascetur ridiculus...</p>
-                      <a class="read-more" href="blog-single.html">Read more
-                        <i class="material-icons">chevron_right</i>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- .content -->
-                </div>
-                <!-- .post-inner -->
-              </article>
-              <!-- .post -->
-              <article class="post">
-                <div class="post-inner row">
-                  <div class="col-md-4">
-                    <figure class="post-thumb">
-                      <a href="blog-single.html">
-                        <img class="img-responsive" src="images/blog/blog-post-5-sm.jpg" alt="" /> </a>
-                    </figure>
-                    <!-- .post-thumb -->
-                  </div>
-                  <div class="content col-md-8">
-                    <h3 class="post-title">
-                      <a href="blog-single.html">Jane Jacobs community theory</a>
-                    </h3>
-                    <div class="meta">
-                      <ul class="meta-list list-inline">
-                        <li class="post-time">15 September, 2017</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>6</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                    </div>
-                    <!--meta -->
-                    <div class="post-entry">
-                      <p>Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consect et magnis dis...</p>
-                      <a class="read-more" href="blog-single.html">Read more
-                        <i class="material-icons">chevron_right</i>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- .content -->
-                </div>
-                <!-- .post-inner -->
-              </article>
-              <!-- .post -->
-              <article class="post">
-                <div class="post-inner row">
-                  <div class="col-md-4">
-                    <figure class="post-thumb">
-                      <a href="blog-single.html">
-                        <img class="img-responsive" src="images/blog/blog-post-6-sm.jpg" alt="" /> </a>
-                    </figure>
-                    <!-- .post-thumb -->
-                  </div>
-                  <div class="content col-md-8">
-                    <h3 class="post-title">
-                      <a href="blog-single.html">Mauris quis tellus magna</a>
-                    </h3>
-                    <div class="meta">
-                      <ul class="meta-list list-inline">
-                        <li class="post-time">20 September, 2017</li>
-                        <li class="post-author"> by
-                          <a href="#">Emma Lawrence</a>
-                        </li>
-                        <li class="post-comments-link">
-                          <a href="blog-single.html#comment-area">
-                            <i class="material-icons">chat_bubble</i>6</a>
-                        </li>
-                      </ul>
-                      <!-- .meta-list -->
-                    </div>
-                    <!--meta -->
-                    <div class="post-entry">
-                      <p>Cum sociis natoque penatibus et parturient montes. Jane Jacobs community theory of social change economic development...</p>
-                      <a class="read-more" href="blog-single.html">Read more
-                        <i class="material-icons">chevron_right</i>
-                      </a>
-                    </div>
-                  </div>
-                  <!-- .content -->
-                </div>
-                <!-- .post-inner -->
-              </article>
+              @endif
+              @endforeach
               <!-- .post -->
             </div>
             <!-- .blog-list -->

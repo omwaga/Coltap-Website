@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <!-- Document title -->
-    <title>Blog | Marvel</title>
-    <meta name="description" content="Marvel - HTML Template for Product Promotion" />
+    <title>Blog | AcodeM</title>
+    <meta name="description" content="AcodeM - HTML Template for Product Promotion" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" />
     <link rel="icon" href="images/favicons/favicon.ico" />
@@ -30,7 +30,7 @@
         <header class="header header-blog">
           <div class="container">
             <h1 class="logo">
-              <a href="blog.html">Marvel
+              <a href="/fromblog">AcodeM
                 <span class="sub">Blog</span>
               </a>
             </h1>
@@ -53,12 +53,14 @@
                       <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
+                      @foreach($categories as $category)
                       <li>
-                        <a href="{{route('category')}}">Business</a>
+                        <a href="{{route('category', $category->name)}}">{{$category->name}}</a>
                       </li>
+                      @endforeach
                     </ul>
                   </li>
-                  <li class="nav-item dropdown">
+                  <!-- <li class="nav-item dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Archives
                       <span class="caret"></span>
                     </a>
@@ -67,7 +69,7 @@
                         <a href="{{route('blogarchive')}}">November 2017 (3)</a>
                       </li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li class="nav-item nav-item-main-site last">
                     <a href="/">Back to main site</a>
                   </li>
@@ -129,12 +131,6 @@
                       </li>
                       <li>
                         <a href="#">&rsaquo; Pricing</a>
-                      </li>
-                      <li>
-                        <a href="#">&rsaquo; API</a>
-                      </li>
-                      <li>
-                        <a href="#">&rsaquo; Download</a>
                       </li>
                     </ul>
                   </div>
@@ -218,7 +214,7 @@
           <!-- .footer-content -->
           <div class="bottom-bar">
             <div class="container">
-              <p class="copyright">Powered by Bootstrap. All rights reserved &copy; rustheme</p>
+              <p class="copyright">All rights reserved &copy; <script>document.write(new Date().getFullYear())</script> AcodeM.</p>
             </div>
             <!-- .container -->
           </div>

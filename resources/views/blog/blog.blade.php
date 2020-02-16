@@ -10,8 +10,8 @@
                 <a href="blog-single.html">
                   <div class="container">
                     <div class="carousel-caption">
-                      <h2>Powerful design prototyping tools</h2>
-                      <p>Tackling, local solutions inspire social change care metrics challenges...</p>
+                      <h2>Technology for Good</h2>
+                      <p>We're here promoting Tech For Good jobs and being a general go-to place for all Tech For Good news</p>
                     </div>
                   </div>
                 </a>
@@ -38,19 +38,19 @@
                 <article class="post hentry col-md-4 col-sm-6">
                   <div class="post-inner">
                     <figure class="post-thumb">
-                      <a href="blog-single.html">
+                      <a href="/blog/{{$article->title}}">
                         <img class="img-responsive" src="images/blog/blog-post-3-sm.jpg" alt="" /> </a>
                     </figure>
                     <!-- .post-thumb -->
                     <div class="content">
                       <h3 class="post-title">
-                        <a href="blog-single.html">{{$article->title}}</a>
+                        <a href="/blog/{{$article->title}}">{{$article->title}}</a>
                       </h3>
                       <ul class="meta-list list-inline">
-                        <li class="post-time post_date date updated">2017-04-21</li>
-                        <li class="post-author"> by
+                        <li class="post-time post_date date updated">{{$article->created_at}}</li>
+                        <!-- <li class="post-author"> by
                           <a href="#">Andy Gabriel</a>
-                        </li>
+                        </li> -->
                         <li class="post-comments-link">
                           <a href="blog-single.html#comment-area">
                             <i class="material-icons">chat_bubble</i>8</a>
@@ -58,8 +58,8 @@
                       </ul>
                       <!-- .meta-list -->
                       <div class="post-entry">
-                        <p>{{ substr($article->description, 0, 50) }}</p>
-                        <a class="read-more" href="blog-single.html">Read more
+                        <p>{!! substr($article->description, 0, 50) !!}</p>
+                        <a class="read-more" href="/blog/{{$article->title}}">Read more
                           <i class="material-icons">chevron_right</i>
                         </a>
                       </div>

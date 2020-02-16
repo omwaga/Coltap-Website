@@ -4,11 +4,11 @@
         <div class="blog blog-entry-wrapper">
           <div class="blog-entry">
             <article class="post">
-              <header class="blog-entry-heading bg-img bg-inverse bg-overlay" style="background-image: url(images/backgrounds/background-3.jpg);">
+              <header class="blog-entry-heading bg-img bg-inverse bg-overlay" style="background-image: url({{asset('images/backgrounds/background-3.jpg')}});">
                 <div class="container text-center">
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <h2 class="title">Powerful design prototyping tools</h2>
+                      <h2 class="title">{{$blog->title}}</h2>
                       <div class="meta">
                         <ul class="meta-list list-inline">
                           <li class="post-time">25th May, 2017</li>
@@ -42,68 +42,7 @@
               <div class="container">
                 <div class="row">
                   <div class="blog-entry-content col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec. Cum sociis natoque penatibus et magnis dis parturient
-                      montes, nascetur ridiculus mus. Mauris quis tellus magna.</p>
-                    <p>Pellentesque mattis scelerisque nibh eu tincidunt. Phasellus feugiat arcu eget sem tincidunt aliquam. Integer eleifend risus quis venenatis scelerisque. Nulla egestas commodo dignissim. Curabitur vel imperdiet diam.</p>
-                    <h3 class="section-heading">Section Heading</h3>
-                    <p>Cras adipiscing ipsum vel molestie cursus. In ultrices tristique vestibulum. Aenean ut dui diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut bibendum ipsum nec sagittis ultrices. Vestibulum
-                      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-                    <figure class="figure">
-                      <img class="img-responsive" src="images/blog/blog-content.jpg" alt="" />
-                      <figcaption class="figure-caption">Image Source:
-                        <a href="#" onclick="return false;">Cras pharetra dolor dui</a>
-                      </figcaption>
-                    </figure>
-                    <p>Morbi vulputate bibendum fringilla. Sed fermentum nisi laoreet, porttitor ipsum et, vehicula diam. Fusce iaculis turpis dolor, et cursus arcu cursus vel. Ut lobortis tellus ornare ultrices tristique. Praesent cursus, mi ac rutrum ultrices,
-                      lectus erat pellentesque urna, at placerat eros nisi vitae ligula.</p>
-                    <ul class="custom-list-style">
-                      <li>
-                        <i class="material-icons">check_circle</i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                      <li>
-                        <i class="material-icons">check_circle</i>Aliquam tincidunt mauris eu risus.</li>
-                      <li>
-                        <i class="material-icons">check_circle</i>Vestibulum auctor dapibus neque.</li>
-                      <li>
-                        <i class="material-icons">check_circle</i>Sagittis tempus lacus enim ac dui.</li>
-                    </ul>
-                    <p>Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. </p>
-                    <blockquote class="custom-quote">
-                      <p>
-                        <i class="material-icons">format_quote</i>Leverage expanding community ownership cross-agency coordination global network enable impact. Women's rights; prosperity tackling, fundraising campaign indicator. Hack worldwide frontline committed empowerment
-                        focus on impact global health replicable generosity.</strong>
-                      </p>
-                      <p> Advancement, empower dialogue humanitarian; resourceful, clean water promising development legitimize.</p>
-                      <p class="source">
-                        <span class="name">Albert Epstein</span>
-                        <br>
-                        <span class="title">
-                          <a href="http://sethgodin.typepad.com/seths_blog/2007/09/big-ideas.html" target="_blank">
-                            <i class="fa fa-external-link"></i> Lorem Ipsum</a>
-                        </span>
-                      </p>
-                    </blockquote>
-                    <h3 class="section-heading">Section Heading</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
-                      mi vitae est. Mauris placerat eleifend leo.</p>
-                    <ol>
-                      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                      <li>Aliquam tincidunt mauris eu risus.</li>
-                      <li>Vestibulum auctor dapibus neque.</li>
-                    </ol>
-                    <p>Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
-                    <p class="video-container">
-                      <iframe src="//player.vimeo.com/video/50134267?color=ffffff&amp;wmode=transparent" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </p>
-                    <p class="box">Quisque adipiscing tincidunt tellus a vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ornare lorem elit, a aliquet nisl auctor vitae.</p>
-                    <h3 class="section-heading">Section Heading</h3>
-                    <p>Phasellus ligula dolor, fringilla at tincidunt non, fringilla eu justo. Sed hendrerit mauris quis hendrerit mollis. Vivamus vitae ultrices quam. Duis sed mi leo. Curabitur facilisis, erat vel egestas tincidunt, nisi ipsum ultricies
-                      velit, non scelerisque magna mi non nibh.</p>
-                    <ul>
-                      <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-                      <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-                      <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-                    </ul>
-                    <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+                    <p>{!!$blog->description!!}</p>
                   </div>
                   <!-- .blog-entry-content -->
                   <!-- .Soical media buttons-->

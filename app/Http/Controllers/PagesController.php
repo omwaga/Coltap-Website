@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\BlogArticle;
+use App\BlogCategory;
 
 class PagesController extends Controller
 {
@@ -47,18 +48,26 @@ class PagesController extends Controller
     public function fromblog()
     {
         $articles = BlogArticle::all();
+        $categories = BlogCategory::all();
 
-    	return view('blog.blog', compact('articles'));
+    	return view('blog.blog', compact('articles', 'categories'));
     }
 
-    public function blog()
+    public function blog($title)
     {
-    	return view('blog.blog-single');
+        $blog = BlogArticle::where('title', $title)->first();
+        $categories = BlogCategory::all();
+
+    	return view('blog.blog-single', compact('blog','categories'));
     }
 
-    public function category()
+    public function category($name)
     {
-    	return view('blog.blog-category');
+        $category_id = BlogCategory::where('name', $name)->value('id');
+        $categories = BlogCategory::all();
+        $articles = BlogArticle::where('category_id', $category_id)->get();
+
+    	return view('blog.blog-category', compact('categories', 'articles', 'name'));
     }
 
     public function blogarchive()
